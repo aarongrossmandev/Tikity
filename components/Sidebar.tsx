@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { link } from 'fs';
-import GoogleLogin from 'react-google-login';
 import { AiFillHome, AiOutlineMenu } from 'react-icons/ai';
 import { ImCancelCircle } from 'react-icons/im'
 import Link from 'next/link';
