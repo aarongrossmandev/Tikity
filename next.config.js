@@ -3,6 +3,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  
    reactStrictMode: true,
   images: {
     domains: ["img.icons8.com",
