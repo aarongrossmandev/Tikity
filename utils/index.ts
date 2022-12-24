@@ -1,6 +1,5 @@
 import axios from 'axios';
-import jwt_decode from 'jwt-decode';
-
+import jwtDecode from 'jwt-decode';
 export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 // export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
@@ -27,7 +26,7 @@ export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 // };
 
 export const createOrGetUser = async (response:any, addUser: any) => {
-  const decoded: {name: string, picture: string, sub: string} = jwt_decode(response.credential);
+  const decoded: {name: string, picture: string, sub: string} = jwtDecode(response.credential);
 
   const { name, picture, sub } = decoded;
 

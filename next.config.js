@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  reactStrictMode: true,
+   reactStrictMode: true,
   images: {
     domains: ["img.icons8.com",
     "lh3.googleusercontent.com",

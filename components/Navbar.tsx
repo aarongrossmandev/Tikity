@@ -7,7 +7,8 @@ import { BiSearch } from 'react-icons/bi';
 import { IoMdAdd } from 'react-icons/io';
 import { GoogleLogin, googleLogout } from '@react-oauth/google';
 import TikityLogo from '../utils/tikity-logo.png';
-
+import bear from '../utils/bear.png';
+import jwtDecode from 'jwt-decode';
 
 import useAuthStore from '../store/authStore';
 import { createOrGetUser } from '../utils';
@@ -16,6 +17,7 @@ const Navbar = () => {
   const { userProfile, addUser, removeUser } = useAuthStore();
   const [searchValue, setSearchValue] = useState('');
   const router = useRouter();
+
 
   const handleSearch = (e: {preventDefault: () => void }) => {
     e.preventDefault();
@@ -68,13 +70,13 @@ const Navbar = () => {
                   <span className="hidden md:block">Upload</span>
                 </button>
               </Link>
-              {userProfile.image && (
+              {userProfile && (
                 <Link href='/'>
                 <>
                   <Image
                   width={34}
                   height={34}
-                  src={userProfile.image} 
+                  src={bear} 
                   alt="profile photo"
                   className="rounded-full cursor-pointer" 
                   />
